@@ -7,28 +7,25 @@
 </head>
 <body>
     <script>
-     var grade = [] ;
-        grade.push(1);
-        grade.push(2);
-
-    for(var a = 1; a<= 5; a++){
-            var b = prompt("Enter value");
-              grade.push(b); 
+     var grades = [];
+     var size = prompt("Enter number of array");
+    for(var a = 1; a <= size; a++){
+        var b = prompt("Enter grades");
+              grades.push(b); 
   
 
  }
         var sum = 0;
-    for (var i = 0; i < grade.length; i++) {
-       sum += +grade[i];
+    for (var i = 0; i < grades.length; i++) {
+       sum += +grades[i];
       
 
     }
     
-    var average = sum/ grade.length;
+    var average = sum/ grades.length;
      alert( "Total:"+sum);
      alert( "Your average is:" + average);
      
-
 </script>
 </body>
 </html>
