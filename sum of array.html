@@ -7,16 +7,19 @@
 </head>
 <body>
     <script>
-        var numbers = [] ;
+       var numbers = [] ;
+        numbers.push(1);
         numbers.push(2);
-        numbers.push(3);
+         for(var a = 1; a <= 4; a++){
+        var b = prompt('Enter value');
+     numbers.push(b); 
+        }
        var sum = 0;
     for (var i = 0; i < numbers.length; i++) {
-       sum += numbers[i]
-}
-    numbers[i] = prompt('Enter value');
-     document.write(sum); 
-
+       sum += +numbers[i];
+    }
+     alert(sum);
+     
 
     </script>
 </body>
