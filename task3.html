@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p id="info"></p>
+    <button onclick="myFunction()">Click</button>
+
+    <script>
+        var fruits, text; 
+       fruits = ["Banana", "Orange", "Apple", "Mango",]
+
+   text = "<ol>";
+   for ( let i = 0; i < fruits.length;i++) {
+  text += "<li>" + fruits[i] + "</li>";
+  }
+   text += "</ol>";
+
+  document.getElementById("info").innerHTML = text;
+   function myFunction(){
+     alert("hello");
+         
+ }
+
+    </script>
+</body>
+</html>
