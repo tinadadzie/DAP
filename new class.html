@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radius</title>
+</head>
+<body>
+    <p id="info"></p>
+    <script>
+var circumference = prompt("Enter circumference");
+
+class Circle{
+constructor(circumference, pi) {
+this.circumference = circumference;
+this.pi = pi;
+
+}
+
+getResult() {
+return "Your radius is " + this.circumference / this.pi * 2;
+
+}
+}
+
+myradius = new Circle(circumference, 3.14);
+
+document.getElementById("info").innerHTML = myradius.getResult();
+
+    </script>
+</body>
+</html>
