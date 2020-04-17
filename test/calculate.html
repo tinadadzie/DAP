@@ -19,34 +19,33 @@
 
 }
 
-       add(num1,num2) {
-          return "Your result is :" + this.num1 + this.num2 ;
-    
-}
-      sub(num1,num2) {
-          return "Your result is :" + this.num1 - this.num2 ;
-    
-}
-      multiply(num1,num2) {
+       multiply(num1,num2) {
           return "Your result is :" + this.num1 * this.num2 ;
     
 }
-     divide(num1,num2) {
+      divide(num1,num2) {
           return "Your result is :" + this.num1 / this.num2 ;
+    
+}
+      add(num1,num2) {
+          return "Your result is :" + this.num1 + this.num2 ;
+    
+}
+     sub(num1,num2) {
+          return "Your result is :" + this.num1 - this.num2 ;
     
 }
 }
 myresult = new mathsOperation(num1, num2,);
-alert(myresult.add());
-alert(myresul.sub());
-alert(myresult.multiply());
-alert(myresult.divide());
+document.write(myresult.add());
+document.write(myresul.sub());
+document.write(myresult.multiply());
+document.write(myresult.divide());
 
 
 
 
 
-document.getElementById("info").innerHTML = myresult.add();
 
    </script> 
 </body>
