@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>looping through</title>
+</head>
+<body>
+    <p id = info></p>
+<script>
+    var languages = [];
+    
+     languages[0] = {
+         JAVA:"77",
+          JAVASCRIPT: "65",
+           PYTHON: 86
+           };
+     var i, item;
+ 
+  for (i = 0; i < languages.length; i++) {
+  for (item in languages[i]) {
+    document.write(item + ": " + languages[i][item] + "<br>");
+        
+  }
+
+}
+
+</script>
+</body>
+</html>

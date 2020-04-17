@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+<style type="text/css">
+		
+  body {
+  	font-family: sans-serif;
+  	font-size: 10px;
+    background-color: #e74c3c;
+  }
+
+  form {
+  	background: #fff;
+  	padding: 4em 4em 2em;
+  	max-width:300px;
+  	margin:30px auto 0;
+  	border-radius:10px;
+  }
+  
+    input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    margin-top:-35px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    border: 1px solid #e74c3c;
+    font-size: 1.6em;
+    padding: .8em .5em;
+    border-radius: 2px;
+  }
+ 
+  button {
+	background-color:#e74c3c;
+    width:190px;
+    height:38px;
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size:23px;
+  }
+
+  button:hover {
+    background:#e74c3c;
+  }
+  
+</style>
+</head>
+
+<body><br><br>
+	<form><br><br>
+		
+  		
+		
+		<input id="password"name="password" type="password" placeholder="Password" style="font-size:18px"><br><br><br>
+		<input onkeyup="checkMatch()" id="confirm_password" name="confirm_password" type="password" placeholder="Confirm Password"style="font-size:18px"><br>
+       <p id="correct" style="color: green;display: none;font-size:14px">Your passwords match</p>
+       <p id="wrong" style="color: red;display: none;font-size:14px">Your passwords do not match!!</p>
+			 <button onclick="myFunction()">Submit</button>
+
+	</form>
+
+ 
+  
+
+</body>
+<script type="text/javascript">
+  
+    var password=document.getElementById('password');
+    var confirm_password=document.getElementById('confirm_password');
+
+  
+  function checkMatch(){
+    var passCorrect=document.getElementById('correct');
+    var passWrong=document.getElementById('wrong');
+
+    if (password.value==confirm_password.value) {
+      document.getElementById('correct').style.display="block";
+    }
+
+    else if(!(password.value==confirm_password.value)){
+      document.getElementById('wrong').style.display="block";
+    }
+    else {
+      alert("error");
+    }
+  }
+
+  </script>
+</html>

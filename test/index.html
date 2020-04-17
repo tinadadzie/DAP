@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing the element of an object</title>
+</head>
+<body>
+    <p id="info"></p>
+    <p id="demo"></p>
+    <p id="element"></p>
+    <script>
+        var person = {firstName:"Hello", lastName:"Hi", age:46}; 
+
+        document.getElementById("info").innerHTML = person["firstName"];
+        
+        document.getElementById("demo").innerHTML = person["lastName"];
+        document.getElementById("element").innerHTML = person["age"];
+
+    </script>
+</body>
+</html>
