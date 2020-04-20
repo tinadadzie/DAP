@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       class LinkedList {
+    constructor(value) {
+        this.head = null;   
+
+    } 
+    
+ }
+
+//   isEmpty property
+ LinkedList.prototype.isEmpty = function() {
+      return this.head === null;
+};
+
+//    size property
+LinkedList.prototype.size = function(){
+  var current = this.head;
+  var count = 1;
+
+  while (current !== null) {
+    count++;
+    current = current.next;
+  }
+
+  return count;
+};
+
+LinkedList.prototype.prepend = function(val) {
+  var newNode = {
+    data: val,
+    next: this.head
+  }
+
+  this.head = newNode;
+};
+
+
+
+LinkedList.prototype.append = function(val) {
+  var newNode = {
+    data: val,
+    next: null
+  };
+
+  if (this.isEmpty()) {
+    this.head = newNode;
+    return;
+  }
+
+  var current = this.head;
+
+  while (current.next !== null) {
+    current = current.next;
+  }
+
+  current.next = newNode;
+};
+
+    var list = new LinkedList();
+    list.prepend(2);
+    list.prepend(4);
+     list.append(20);
+     list.print();
+
+    console.log(list.isEmpty());
+    console.log(list.size());
+    console.log(list.prepend());
+    console.log(list.append())
+    
+
+   </script> 
+</body>
+</html>
