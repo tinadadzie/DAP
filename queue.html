@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue</title>
+</head>
+<body>
+    <h1>Enqueue numbers 1 to 7 using for loop</h1>
+    <script>
+
+     function Queue() {
+     this.items = [];
+}
+
+     Queue.prototype.enqueue = function (i) {
+      this.items.push(i);
+      
+ };
+
+
+        let x = new Queue();
+        for (let i = 1; i <= 7; i++) {
+            x.enqueue(i);
+}
+    console.log(x);
+    </script>
+</body>
+</html>
