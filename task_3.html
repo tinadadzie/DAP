@@ -8,31 +8,30 @@
 <body>
     <script>
 
- var languages;
- var size = prompt("Enter number of language");
-
-   for(var a = 1; a <= size; a++){
-     var value = prompt("Enter programming languages");
-    
- }
-
  function Queue() {
      this.languages = [];
 
 
-     Queue.prototype.enqueue = function (i) {
-      this.languages.push(i);
+     Queue.prototype.enqueue = function (languages) {
+      this.languages.push(languages);
       
  };
 
 
 }
-        var queue = new Queue();
-        for (let i = languages; i <= languages; i++) {
-            queue.enqueue(i);
-            
+
+       var value = prompt("Enter number of languages");
+        var queue = new Queue;
+        
+       for(var i = 1; i <= value; i++){
+        var languages = prompt("Enter programming languages not more than four languages");
+        queue.enqueue(languages);
+      
 }
-    console.log(queue);
+         document.write("<li>" + languages[languages]+ "</li>");
+  
+
+//          console.log(queue);
   
 
 
@@ -40,38 +39,7 @@
 
 
 
-
-//  var grade = [];
-//      var size = prompt("Enter number of array");
-//     for(var a = 1; a <= size; a++){
-//         var b = prompt("Enter grade");
-//               grade.push(b); 
-  
-
-//  }
-//         var sum = 0;
-//     for (var i = 0; i < grade.length; i++) {
-//        sum += +grade[i];
-      
-
-//     }
-    
-//     var average = sum/ grade.length;
-//      alert( "Total:"+sum);
-//      alert( "Your average is:" + average);
-     
-//         var sum = 0;
-//     for (var i = 0; i < grade.length; i++) {
-//        sum += +grade[i];
-      
-
-//     }
-    
-//     var average = sum/ grade.length;
-//      alert( "Total:"+sum);
-//      alert( "Your average is:" + average);
-     
-//     </script>
+   </script>
     
 </body>
 </html>
