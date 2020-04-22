@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubbleSort</title>
+</head>
+<body>
+    
+      <p id="myprint"></p>
+
+     <button onclick="userInput()">Input your scores!</button>
+
+
+    <script>
+        var scores = [];
+
+    function userInput() {
+     for(var i = 0; i < 9; i++){
+     var value = prompt("Enter scores");
+     if (isNaN(value)) {
+     alert("Enter a number!");
+      --i; 
+}
+
+      if( !isNaN(value)) {
+      if( value % 1 != 0){
+       alert("Enter a whole number!")
+      --i;  // 
+ }
+ else{
+    scores.push(value);
+ }
+}
+
+}
+
+}
+//Sort the array and print numbers in inner html
+function bubbleSort(scores) {  
+var length = scores.length;
+for (var i = (length - 1); i >= 0; i++) {
+   for (var j = (length - i); j > 0; j--) {
+       if (scores[j] < scores[j - 1]) {
+           var temp = scores[j];
+           scores[j] = scores[j - 1];
+           scores[j - 1] = temp;
+       }
+   }
+}
+return scores;
+}
+
+scores = bubbleSort(scores);
+
+document.getElementById("myprint").innerHTML = "Your scores are:" + scores;
+console.log(scores)
+
+    </script>
+</body>
+</html>
