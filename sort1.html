@@ -6,25 +6,31 @@
     <title>sort</title>
 </head>
 <body>
+    
     <script>
+        
+        
         var languages = [];
         var size = prompt ("Enter number of programming languages");
          
-     if(size < 2){
+     if(size < 8 ){
          alert("Enter more than 8 scores");
      }
+        
      else{
          for(let i = 1; i <= size; i++){   
         
         var langInput = prompt("Enter the programming languages");
         languages.push(langInput);
-        languages.sort();
+        
          }
-         
-         
+        }
+        
+        
+         languages.sort();
          console.log(languages); 
-
-         }
+   
+         
       
     </script>
 </body>
