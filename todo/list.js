@@ -1,6 +1,6 @@
 // reference to the add button
 document.getElementById('add').addEventListener('click',function(){
-	// creating variable to acess to the the input
+	
 	var task = document.getElementById('task').value;
 	if(task){
 		addTodoTask(task);
