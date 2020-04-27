@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort</title>
+</head>
+<body>
+    <script>
+      function merge (front,back){
+        let array = [];
+        while(front.length - 1 && back.length - 1){
+            if(front[0] > back[0]){
+                array.push(front.shift());
+            }
+            else{
+                array.push(back.shift());
+            }
+        }
+        return array.concat(front.slice().concat(back.slice()));
+      }  
+
+      function mergeSort(array){
+          if(array.length < 2){
+              return array;
+          }
+          const middleItem = Math.floor(array.length/2);
+          const front = array.slice(0,middleItem);
+          const back = array.slice(middleItem);
+
+          return merge(mergeSort(front), mergeSort(back));
+      }
+      const unsortedArray = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
+      console.log(mergeSort(unsortedArray.slice()));
+    </script>
+</body>
+</html>
