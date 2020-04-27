@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MergeSort</title>
+</head>
+  <!-- Question 
+    In order for your students to be eligible for a scholarship for a current semester,
+    They will need to providethe scores of all courses they took in the preceeding semester.
+    Accept scores of students who would like apply for the scholarship,Don't accept scores for less 
+    than 8 courses.
+    Sort the scores out using the merge sort algorithm in ascending order.
+-->
+  
+
+<body>
+    <script>
+    var scores = [];
+    var size = prompt ("Enter number of courses");
+         
+     if(size < 8 ){
+         alert("Enter more than 8 scores");
+     }
+     else{
+         for(let i = 1; i <= size; i++){   
+        
+        var scoreInput = parseInt(prompt("Enter the scores"));
+        scores.push(scoreInput);
+        
+         }
+        }
+ //    compare the arrays item by item and return the concatenated result
+    function merge(left, right) {
+     let newScores = [];
+     while (left.length && right.length) {
+      if (left[0] < right[0]) {
+      newScores.push(left.shift());
+    } 
+    else {
+      newScores.push(right.shift());
+    }
+  }
+     return newScores.concat(left.slice().concat(right.slice()));
+}
+    
+    function MergeSort(newScores){
+        if(newScores.length < 2){
+            return newScores;
+        }
+        //   get the middle item of the array rounded down
+        const middle = Math.floor(newScores.length/2);
+        //   items on the left side
+        const left =  newScores.slice(0, middle);
+        //   items on the right side
+        const right = newScores.slice(middle);
+
+        return merge(MergeSort(left),MergeSort(right));
+ 
+    }
+
+    console.log(MergeSort(scores.slice()));
+          
+    </script>
+</body>
+</html>
