@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Quick sort</span> 
+<p> sort follows Divide and Conquer algorithm. It is dividing elements in to smaller parts based on some condition and performing the sort operations on those divided smaller parts. Hence, it works well for large datasets. So, here are the steps how Quick sort works in simple words.
+1.	First select an element which is to be called as pivot element.
+2.	Next, compare all array elements with the selected pivot element and arrange them in such a way that, elements less than the pivot element are to its left and greater than pivot is to it's right.
+3.	Finally, perform the same operations on left and right side elements to the pivot element.
+</p>
+    <script>
+        function quick_Sort(origArray) {
+	if (origArray.length <= 1) { 
+		return origArray;
+	} else {
+        // creating two arrays to hold values that are on the left and  right pivot value;
+		var left = [];
+		var right = [];
+		var newArray = [];
+		var pivot = origArray.pop();
+		var length = origArray.length;
+
+		for (var i = 0; i < length; i++) {
+			if (origArray[i] <= pivot) {
+				left.push(origArray[i]);
+			} else {
+				right.push(origArray[i]);
+			}
+		}
+
+		return newArray.concat(quick_Sort(left), pivot, quick_Sort(right));
+	}
+}
+
+var myArray = [3, 0, 2, 5, -1, 4, 1 ];
+
+console.log("Original array: " + myArray);
+var sortedArray = quick_Sort(myArray);
+console.log("Sorted array: " + sortedArray);
+
+    </script>
+</body>
+</html>
