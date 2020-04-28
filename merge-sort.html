@@ -9,7 +9,7 @@
     <script>
       function merge (front,back){
         let array = [];
-        while(front.length - 1 && back.length - 1){
+        while(front.length  && back.length ){
             if(front[0] > back[0]){
                 array.push(front.shift());
             }
