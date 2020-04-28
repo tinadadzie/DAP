@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var courses = ["Java" ,"Data structure","Complier Construction","Database mgt","Data science",
+        "Artificial Intelligence", "Expert system", "C++"];
+       
+        var registeredCourses = [];
+        var studentCourses = prompt("Enter number of languages.");
+        
+        if(studentCourses < 4){
+             alert("Input more than 4 languages");
+   }
+           else{
+	        for (var i =1; i <= studentCourses; i++){
+		    var coursesValue = prompt("Enter preferred languages")
+
+            if(courses.indexOf(coursesValue) >- 1){
+                registeredCourses.push(coursesValue);
+            }
+          else{
+              alert("Mismatch");
+          }
+
+		
+      }	
+
+        }	
+		
+	
+    function merge(left, right) {
+     let array = [];
+     while (left.length && right.length) {
+      if (left[0] < right[0]) {
+      array.push(left.shift());
+    } 
+    else {
+      array.push(right.shift());
+    }
+  }
+     return array.concat(left.slice().concat(right.slice()));
+}
+    
+    function MergeSort(array){
+        if(array.length < 2){
+            return array;
+        }
+        //   get the middle item of the array rounded down
+        const middle = Math.floor(array.length/2);
+        //   items on the left side
+        const left =  array.slice(0, middle);
+        //   items on the right side
+        const right = array.slice(middle);
+
+        return merge(MergeSort(left),MergeSort(right));
+ 
+    }
+
+    
+    
+    console.log(MergeSort(registeredCourses.slice()));
+    
+    
+           
+    </script>
+</body>
+</html>
