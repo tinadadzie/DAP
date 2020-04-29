@@ -1,0 +1,298 @@
+<html>
+<head>
+	<title>To-Do_List</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- styling -->
+    <style>
+        body{
+ background-color: #10ac84;   
+}
+
+ h1 {
+	color: #fff;
+	font-size: 3rem;
+	font-weight: 50;
+	text-align: center;
+	margin: 1rem 0 3rem; 
+	font-family: 'Hind', sans-serif;
+}
+ #add{
+     background:#10ac84;
+	 border-color:#fff; 
+	 width: 150px;
+	 height: 40px; 
+	 margin: 27px;
+	 
+     
+     
+
+ }
+.title{
+	color:#fff;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+header{
+	background-color: #10ac84;
+	border-bottom: 0.2px solid grey;
+	height: 80px;
+	border-bottom: 1px solid #ddd;
+    box-shadow: 0 3px 2px -2px rgba(200,200,200,0.2);
+}
+.input-task{
+	width: 100%;
+	padding: 10px;
+}
+.main{
+	padding: 10px;
+}
+.task-container{
+	margin-left: 10%;
+}
+.uncompleted,.completed{
+	min-height: 550px;
+	padding: 0;
+	background-color: transparent;
+}
+.uncompleted{
+	margin-right: 2%;
+}
+ul.todo{
+	list-style-type: none;
+	width: 100%;
+	float: left;
+	padding: 0;
+}
+ul.todo li{
+	width: 100%;
+	min-height: 50px;
+	float: left;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 2px 3px 4px rgba(44,62,80,0.10);
+	margin-bottom: 10px;
+	padding: 10px 0 10px 5px;
+}
+ul.todo li:last-of-type{
+	margin-bottom: 0;
+}
+ul.todo div.row{
+	width: 100%;
+	min-height: 20%;
+	margin: 0;
+}
+ul.todo div.row div.task{
+	padding-right: 10px;
+	min-height: 20%;
+	font-size: 18px;
+}
+div.uncompleted ul.todo div.row a{
+	text-decoration: none;
+	float: right;
+	font-size: 20px;
+	padding-right: 10px;
+	color: grey;
+}
+div.uncompleted ul.todo div.row a.check{
+	color:grey;
+}
+div.uncompleted ul.todo div.row a.check:hover{
+	color:#5cb85c;
+}
+div.uncompleted ul.todo div.row a.trash:hover{
+	color:#d9534f;
+}
+
+
+div.completed ul.todo div.row a{
+	text-decoration: none;
+	float: right;
+	font-size: 20px;
+	padding-right: 10px;
+	color: grey;
+}
+div.completed ul.todo div.row a.check{
+	color:#5cb85c;
+}
+div.completed ul.todo div.row a.check:hover{
+	color:grey;
+}
+div.completed ul.todo div.row a.trash:hover{
+	color:#d9534f;
+}
+
+@media(max-width: 480px){
+	.task-container{
+		margin-left: 0;
+	}
+	.uncompleted,.completed{
+		min-height: 250px;
+	}
+	.uncompleted{
+		margin-bottom: 2%;
+	}
+}
+@media (max-width: 767px){
+	.task-container{
+		margin-left: 0;
+	}
+	.uncompleted,.completed{
+		min-height: 250px;
+	}
+	.uncompleted{
+		margin-bottom:2%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.task-container{
+		margin-left: 0;
+	}
+	.uncompleted,.completed{
+		min-height: 250px;
+	}
+	.uncompleted{
+		margin-bottom: 2%;
+	}
+}
+.box{
+	border: 1px dotted red;
+}
+    </style>
+
+    
+</head>
+<body>
+    <h1><span class="title">Todo</span>List</h1>
+	<header>
+		<div class="container-fluid ">
+			<div class="container">
+				    <div class="input-group input-task">
+					  <input type="text" class="form-control " id = "task" class="mb-2"
+					  placeholder="What do you want to do .... " >
+					  <input type="datetime-local" class="form-control" id = "dt" 
+					  placeholder="enter your date and time" style="width: 455px;">
+				      <input type="text" class="form-control" id = "sl" 
+					  placeholder="Enter severity level" style="width: 455px;">
+				      
+				      <span class="input-group-btn">
+				        <button class="btn btn-danger"  type="submit" id="add" >Add </button>
+				      </span>
+				    </div><!-- /input-group -->
+			</div>
+		</div>
+	</header>
+	<div class="container-fluid task-container">
+		<div class="row">
+			<div class="col-md-5 col-sm-12 col-xs-12 uncompleted">
+				<h5 class="text-center">Todo tasks</h5>
+				<ul class="todo" id="todo">
+					<!-- todo list items will be added here-->
+				</ul>
+			</div>
+			<div class="col-md-5 col-sm-12 col-xs-12 completed">
+				<h5 class="text-center">Completed tasks</h5>
+				<ul class="todo" id="completed">
+					<!--completed tasks will be here-->
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+<script>
+    // reference to the add button
+document.getElementById('add').addEventListener('click',function(){
+	// creating variable to acess to the the input
+	var task = document.getElementById('task').value;
+	var dt = document.getElementById('dt').value;
+	var sl = document.getElementById('sl').value;
+
+
+	if(task){
+		addTodoTask(task);
+		document.getElementById('task').value='';
+	} 
+	if(dt){
+		addTodoTask(dt);
+		document.getElementById('dt').value='';
+	}
+	if(sl){
+		addTodoTask(sl);
+		document.getElementById('sl').value='';
+	}
+});
+
+
+// function to remove task
+function removeTask(){
+	var Task = this.parentNode.parentNode.parentNode;
+	var list = Task.parentNode;
+	list.removeChild(Task);
+}
+//   function for completeTask
+function completeTask(){
+	var Task = this.parentNode.parentNode.parentNode;
+	var list = Task.parentNode;
+	var list_id = list.id;
+
+	var target_list = (list_id === 'todo') ? document.getElementById('completed') : document.getElementById('todo')
+	
+	list.removeChild(Task);
+	target_list.insertBefore(Task,target_list.childNodes[0]);
+	}
+//    adding the task to the list
+function addTodoTask(text){
+	var list = document.getElementById('todo');
+    // creating new Element
+	 var item = document.createElement('li');
+
+   //  creatig rows and column to hold the new list
+	var row = document.createElement('div');
+	row.classList.add('row');
+
+	var task = document.createElement('div');
+	task.classList.add('col-md-8');
+	task.classList.add('col-sm-8');
+	task.classList.add('col-xs-8');
+	task.classList.add('task');
+	task.innerText = text;
+
+	
+
+	//   columns created to hold buttons
+	var buttons = document.createElement('div');
+	buttons.classList.add('col-md-4');
+	buttons.classList.add('col-sm-4');
+	buttons.classList.add('col-xs-4');
+
+	//  creating variable to attach new element
+	var trash = document.createElement('a');
+	trash.classList.add('trash');
+	trash.innerHTML='<i class="fa fa-trash-o" aria-hidden="true"></i>';
+	 
+	// clearing list
+	trash.addEventListener('click',removeTask);
+
+
+	var check = document.createElement('a');
+	check.classList.add('check');
+	check.innerHTML = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>'
+//    checking the completed task 
+	check.addEventListener('click',completeTask);
+
+//    inserting the following  buttons,check, trash,row
+	buttons.appendChild(check);
+	buttons.appendChild(trash);
+	row.appendChild(task);
+	row.appendChild(buttons);
+	item.appendChild(row);
+
+	list.insertBefore(item, list.childNodes[0]);
+
+}
+</script>
+</body>
+</html>
