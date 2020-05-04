@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scores</title>
+</head>
+<body>
+    <script>
+         var numbers = [];
+        var sum = 0;
+        var size = prompt ("Enter the size of number ");
+         
+     if(size < 3 ){
+         alert("Enter more than 8 scores");
+     }
+     else{
+         for(var i = 1; i <= size; i++){   
+        
+        var numInput = prompt("Enter your numbers");
+        numbers.push(numInput);
+    
+    
+        for(var i = 0; i<numbers.length; i++ ){
+            sum += numbers[i];
+             
+        } 
+        var average = sum / numbers.length;  
+    } 
+}
+        console.log(average);
+              
+         
+   
+    </script>
+</body>
+</html>
