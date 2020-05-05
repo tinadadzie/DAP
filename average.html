@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average of numbers</title>
+</head>
+<body>
+    <script>
+//         ALGORITHM 
+// 1.	Initialize an empty array
+// 2.	Initialize sum=0
+// 3.	Create a variable with a prompt that accept the size of number to be calculated
+// 4.	Create a variable with a prompt that allow the user to input their numbers
+// 5.	declare a for loop for the size for(i=0;i<size;i++)
+// 6.	declare another for loop for looping the numbers 
+// 7.	sum=sum+numbers[i]
+// 8.  alert sum
+// 9.	average=sum/numbers.length;
+// 10.	alert average 
+
+     var numbers = [];
+     var size = prompt("Enter size of number ");
+
+     if(size < 8){
+         alert("Enter more than 8 numbers ")
+     }
+     else{
+        for(var a = 1; a <= size; a++){
+        var numInput = prompt("Enter number");
+              numbers.push(numInput); 
+      }
+     }
+    
+        var sum = 0;
+    for (var i = 0; i < numbers.length; i++) {
+       sum += +numbers[i];
+      
+
+    }
+    
+    var average = sum / numbers.length;
+     alert( "Total:"+ sum);
+     alert( "Your average is:" + average);
+     
+
+</script>
+</body>
+</html>
