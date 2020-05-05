@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+   <script>
+// //  1.declare a function that takes the parameter n
+//     2. declare an if statement to check if n === 0;
+//     3. then return  the formular for finding the factorial(n * factorial(n-1))
+//     4. console.log the result
+
+
+       function factorial(n) 
+{ 
+
+  if (n === 0)
+ {
+    return 1;
+ }
+  return n * factorial(n-1);
+         
+}
+console.log(factorial(6));
+   </script> 
+</body>
+</html>
