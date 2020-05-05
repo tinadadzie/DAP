@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch Case</title>
+</head>
+<body>
+    <script>
+//Algorithm
+//1. create a variable fruit and assign  a prompt to accept user input
+//2.declare a switch statement with the expression fruit passed into it
+//3. then begin to check for each case if true then it console log the value ;
+//   4. if not it break and proceed to the next case
+//   5. if value entered by the user does'nt tally  with the  fruits available,
+//    then it display the default 
+
+var fruit = prompt("Enter your choice of fruit");;
+        
+switch (fruit) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  case 'Apples':
+    console.log('Apples are $0.32 a pound.');
+    break;
+  case 'Bananas':
+    console.log('Bananas are $0.48 a pound.');
+    break;
+  case 'Cherries':
+    console.log('Cherries are $3.00 a pound.');
+    break;
+  case 'Mangoes':
+   console.log('Mangoes are $5.00 a pound.');
+    break;
+  case 'Papayas':
+    console.log('Papayas are $2.79 a pound.');
+    break;
+  default:
+    console.log('Sorry, we are out of ' + fruit + '.');
+}
+
+
+
+    </script>
+</body>
+</html>
