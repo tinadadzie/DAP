@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<meta charset="utf-8"><!-- Encoding-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+//Algorithm
+//1.Define a function new Duplicate
+//2.Declare an empty array
+//3.Declare a for loop for looping the array values
+//4.Declare an if statement using the indexOf method (numArray.indexOf(myArray[i]) === -1)
+//5.numArray.push(myArray[i])
+//7.6.return numArray
+//console.log result
+
+
+var myArray =  [10, 22, 20, 10, 11];
+
+function removeDuplicate(myArray){
+	var numArray = [];
+
+	for (i = 0; i < myArray.length; i++){
+		 if(numArray.indexOf(myArray[i]) === -1) { 
+		 	numArray.push(myArray[i]);
+	}
+
+	
+}
+return numArray;
+}
+
+var numNewArray = removeDuplicate(myArray);
+console.log(numNewArray);
+
+</script>
+
+
+</body>
+</html>
