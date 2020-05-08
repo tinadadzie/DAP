@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00.300 --> 00:05.250
+In the course materials for this chapter you will find the shopping cart for them sort of going up and
+
+00:05.250 --> 00:14.020
+these into response to your code up in the index and right click to open these with live settlement.
+
+00:15.670 --> 00:24.210
+Open again and this is going to be the same you that we really work in the previous videos.
+
+00:24.300 --> 00:32.080
+You make one and the only difference is that in the shopping cart it doesn't have anything of this chapter
+
+00:32.080 --> 00:37.590
+is that everytime you click on the card is going to be at the items right here.
+
+00:37.930 --> 00:45.550
+But also something really important is that we're going to save the courses into the local storage.
+
+00:45.580 --> 00:49.300
+This is going to be the best example of domus scripting.
+
+00:49.310 --> 00:56.230
+Also look at the storage than the previous one but we're going to continue practicing everything that
+
+00:56.260 --> 00:58.160
+we learn in the fundamentals.
+
+00:58.980 --> 01:05.190
+So again we're going to create the sections here we're going to create the variables in the top then
+
+01:05.190 --> 01:07.070
+we're going to create some listeners.
+
+01:07.320 --> 01:11.190
+And finally we're going to create the fortunes.
+
+01:11.220 --> 01:14.550
+So in this case we're going to need three different variables.
+
+01:14.640 --> 01:16.860
+We're going to need one for the shopping cart.
+
+01:17.190 --> 01:24.580
+We're going to need another one with this list of courses and so other one to please this God.
+
+01:24.960 --> 01:30.840
+So I started with the section for example if we opened the index if you scroll a little you can see
+
+01:30.840 --> 01:32.600
+the other we have these courses list.
+
+01:32.610 --> 01:35.850
+This is they grapple with all the courses.
+
+01:36.060 --> 01:41.750
+So we're going to create a variable right here because we're going to call these 1 courses.
+
+01:42.160 --> 01:48.820
+It's going to be called to document de-select selector and we're going to pass Zaidee is going to be
+
+01:48.870 --> 01:53.230
+courses least then we're going to create different listeners.
+
+01:53.230 --> 01:58.840
+So we're going to call this one and love them and listeners of course remember you can name these wherever
+
+01:58.840 --> 02:00.820
+you want.
+
+02:00.980 --> 02:05.370
+Then we need to create this function so loaded with listeners.
+
+02:06.370 --> 02:09.910
+And here we're going to have our live listeners for this break.
+
+02:10.370 --> 02:19.270
+So first we're going to win a new course is it is going to be like courses Dopp.
+
+02:19.360 --> 02:26.850
+Well listen here's what I use allegation against Gleick and it's going to run a Fortune called by Gore's
+
+02:28.150 --> 02:29.980
+when need to create dysfunction.
+
+02:30.350 --> 02:35.730
+So we're going to have these functions on the bottom and in order to use the Legation to remember that
+
+02:35.730 --> 02:40.280
+you have to pass day event.
+
+02:40.310 --> 02:45.960
+So what's going on here is cancel that luck and where they're going to have of course added something
+
+02:46.080 --> 02:51.770
+like Yeah just to make sure that everything is working before we continue the content.
+
+02:51.980 --> 03:00.050
+So we're going up and so scroll click here and you can see of course that it saw the variables and working
+
+03:00.140 --> 03:02.090
+just fine in the Fanchon's.
+
+03:02.090 --> 03:09.700
+So I'm going to remove these get are going to either Komen Race you know let's use the Legation use
+
+03:10.570 --> 03:17.720
+delegation to find the Course that was added into the shopping cart.
+
+03:18.050 --> 03:24.760
+So once again to use the if the target and remember that you're going to send these riders to the console
+
+03:25.280 --> 03:31.690
+each dot dot and yet you just need to come in line in order to see it is working.
+
+03:32.090 --> 03:37.370
+And click here and you can see that this is going to print the element that was Cliq.
+
+03:37.370 --> 03:44.390
+So we're going to start it and you can see that we have the class of the car right here.
+
+03:44.390 --> 03:56.060
+So we're going to use either to get that class list that contains what are going to use to go to so
+
+03:56.070 --> 04:03.900
+we're going to have a console that loff added something like this something simple to test that everything
+
+04:03.900 --> 04:04.970
+is working.
+
+04:05.460 --> 04:12.530
+So save these and click on that two cars and you can see we have added We want to remove these for example
+
+04:13.160 --> 04:20.370
+and you can see here and you can have Remember that are default because this is going to be the standard
+
+04:20.370 --> 04:27.210
+behavior in the browser when you have a link and you click it will try to open the link and you can
+
+04:27.210 --> 04:33.650
+see if we that prevent default we prevent that jump that we saw in just a little.
+
+04:33.870 --> 04:36.930
+So we're going to make something else before we finish this video.
+
+04:36.940 --> 04:44.630
+Want to go out and read the Course by news so you can see that we have contents at the.
+
+04:44.670 --> 04:48.410
+And this is going to bring in button that we have here.
+
+04:48.720 --> 04:55.910
+So I went to read this body was sort of going to use that element and to read everything from the card
+
+04:56.520 --> 05:04.380
+or when I use that log dot dot dot dot binding element by element.
+
+05:04.560 --> 05:10.730
+So what I'm going to make that we're arresting like this here and then you can see we have the cart
+
+05:11.340 --> 05:14.570
+so from here we can have access for example to these decks.
+
+05:14.610 --> 05:16.970
+They are out for the price.
+
+05:16.980 --> 05:21.760
+And if you take a look here we also have this data dash I-V.
+
+05:21.870 --> 05:25.320
+So each of these courses Cassadee for an ID.
+
+05:25.560 --> 05:28.380
+So using these We're going to have access to everything.
+
+05:28.410 --> 05:35.950
+And so the match that's going to be important I'm going to cut these good these and we're going to create
+
+05:35.980 --> 05:39.180
+any wearable coils gold and guns.
+
+05:39.200 --> 05:44.600
+Coats equals to this value and then we're going to read the bodies.
+
+05:44.800 --> 05:49.810
+So what are going to create an information that is going to we can get calls for.
+
+05:50.350 --> 05:53.710
+And what are going up as these calls information.
+
+05:53.790 --> 05:57.170
+So we need to copy these function.
+
+05:57.560 --> 06:04.970
+And what are going to create a new command that says Rietz the information of the select that selected
+
+06:04.990 --> 06:13.970
+course then we had this one function get calls and this is going to take of course as a parameter and
+
+06:13.970 --> 06:17.700
+then we can have guns or that lock goes like this.
+
+06:19.180 --> 06:25.150
+And just to make that test that everything is working I'm going to say these up in the console click
+
+06:25.150 --> 06:26.980
+here and you can see we have this card.
+
+06:27.250 --> 06:27.960
+Click here.
+
+06:28.330 --> 06:30.810
+And then you can see we have that card.
+
+06:31.230 --> 06:39.270
+This delegation is working in the next video sister working with this function to extract the estimate
+
+06:39.850 --> 06:42.520
+from the course that was selected.

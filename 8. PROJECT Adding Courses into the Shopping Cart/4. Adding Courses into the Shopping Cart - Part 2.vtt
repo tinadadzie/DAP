@@ -1,0 +1,160 @@
+WEBVTT
+
+00:00.270 --> 00:05.730
+So right here we come there is structure that we need in this case we need that they will throw it out
+
+00:05.740 --> 00:13.220
+so they close the road and then we need the table data and we're going to add for example the image
+
+00:13.280 --> 00:14.790
+the title and the price.
+
+00:15.030 --> 00:22.500
+And so we're going to have to remove the scores from the shopping cart or going out at the close of
+
+00:22.500 --> 00:23.610
+the T.
+
+00:23.640 --> 00:31.810
+And Rachel I'm going to hit me as RC and then when I close the doc then I'm going up in the lab sign
+
+00:32.200 --> 00:33.420
+up in the braces.
+
+00:33.450 --> 00:39.070
+And right here you can see we have code so I'm going to pass cores because we have this all into this
+
+00:39.250 --> 00:45.990
+shouldn't we pass the court's Imphal object into this function and we need to access this.
+
+00:46.110 --> 00:48.450
+We're going out that much.
+
+00:48.450 --> 00:54.590
+Remember that your axes are not weak in their properties using adult.
+
+00:54.720 --> 01:04.540
+So we're going to have another DD enclose that DD right here and then copies of copies in page right
+
+01:04.540 --> 01:05.070
+here.
+
+01:06.520 --> 01:11.550
+And this is going to be the title of course title like this.
+
+01:11.560 --> 01:13.710
+Now we're going to make two more copies of this
+
+01:17.310 --> 01:20.710
+the other one is going to be the price we're going up price right here.
+
+01:21.300 --> 01:24.490
+And the last one is going to be an anchor.
+
+01:24.660 --> 01:26.890
+So I'm going I can make some Aspasia here.
+
+01:27.890 --> 01:34.460
+And we're going to use a each ref is going to be to that punch saying we're going to create a class
+
+01:34.460 --> 01:39.110
+called remove and we're going to have that Ivy.
+
+01:39.450 --> 01:46.720
+This case is going to be equal to course and you can see the properties called Ivy.
+
+01:46.850 --> 01:51.570
+So we're going to be and this is going to be a next.
+
+01:51.800 --> 01:57.680
+Then we close the Ingur and this is going to close the table data.
+
+01:58.220 --> 02:05.030
+So they have this template is it's going to be added into these card content break into it they will
+
+02:05.030 --> 02:05.910
+bully.
+
+02:05.930 --> 02:12.990
+So we need to create that variable it's opened up that geas scroll to the top so I can my Here comma
+
+02:14.020 --> 02:16.380
+and we're going to call this one shopping.
+
+02:16.430 --> 02:26.170
+Got that content that is going to be to document that the selector and the avi it's going to be these
+
+02:26.320 --> 02:27.750
+card content.
+
+02:28.180 --> 02:32.000
+So we use the bonsai and got Gunton
+
+02:34.630 --> 02:36.630
+you and card content.
+
+02:36.640 --> 02:40.550
+And then this table while the keyboard.
+
+02:41.280 --> 02:46.740
+So now this variable is going to be available in the program and we can insert scroll to the bottom
+
+02:47.430 --> 02:50.940
+we can insert these grow into that.
+
+02:50.940 --> 02:56.440
+They will watch the so they're comin out into the shopping cart.
+
+02:58.040 --> 03:05.570
+And we're going to have shopping cart content Daut up in child and we're going to pass up all so save
+
+03:05.570 --> 03:14.010
+these and that's another one and that's of course for us for example this one is Timofei CSSA 3 and
+
+03:14.010 --> 03:15.370
+Javascript for beginners.
+
+03:15.540 --> 03:22.860
+You don't have to go out and then scroll to the top and you can see that we have the course information
+
+03:23.550 --> 03:25.360
+we have the magic we have the title.
+
+03:25.800 --> 03:32.600
+And that's all we have the the prize and this extra remove this from the from the list.
+
+03:32.780 --> 03:40.270
+If these you can see that we lost everything because we come in say these into a local storage.
+
+03:40.470 --> 03:41.900
+But this was working.
+
+03:42.330 --> 03:45.570
+If they are one of these you can see that the matches really big.
+
+03:45.570 --> 03:47.210
+So we're going to break it.
+
+03:47.220 --> 03:52.100
+I'm going to have an attribute with something like 100 pixels.
+
+03:52.140 --> 03:53.670
+I think it's going to be fine.
+
+03:53.820 --> 03:55.330
+So let's add another one.
+
+03:56.450 --> 03:59.180
+And yeah you can see that this looks way better.
+
+03:59.510 --> 04:03.020
+The machine really is Moul the name of the course the price.
+
+04:03.140 --> 04:08.070
+And we also have these X remove the cards from the shopping cart.
+
+04:08.390 --> 04:14.240
+So in the next video let's see how we can out the functionality to remove the car the courses from the
+
+04:14.240 --> 04:14.930
+shopping cart.

@@ -1,0 +1,43 @@
+WEBVTT
+
+00:00.460 --> 00:08.750
+So something that we can make here is for example the clear cut definition chirality to clear for from
+
+00:08.750 --> 00:09.560
+localised storage.
+
+00:09.560 --> 00:16.850
+Also So this is going to run this clear cut a function and right after we're going to have the method
+
+00:17.760 --> 00:28.550
+clear from localised touch we're going to call these local storage.
+
+00:28.620 --> 00:35.580
+This is going to execute this quarter and we're going to create a function clears the one local storage
+
+00:36.420 --> 00:40.770
+function little local storage.
+
+00:40.780 --> 00:49.260
+This is going to run local storage that the snow is going to be like this up in the application and
+
+00:49.270 --> 00:54.100
+you can see that we have courses right here you don't need a car and you can see that everything is
+
+00:54.100 --> 00:54.680
+gone.
+
+00:54.880 --> 00:56.110
+Oh this is looking nice.
+
+00:56.110 --> 01:02.020
+In the next video we're going to see how we can add something here and we can remove these from the
+
+01:02.020 --> 01:02.930
+local store.
+
+01:02.980 --> 01:09.500
+You can see when I remove these and the Ferlo the course is going to be also in the storage.
+
+01:09.610 --> 01:15.540
+So we need to grade a function that is going to remove these from the storage.

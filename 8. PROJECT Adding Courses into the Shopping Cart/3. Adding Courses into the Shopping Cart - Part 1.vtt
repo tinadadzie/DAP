@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00.660 --> 00:07.010
+So we have this function get the Course in for we're passing discours which is the complete God.
+
+00:07.530 --> 00:09.260
+We're going to make some money.
+
+00:09.330 --> 00:14.850
+We're going to write a code that is going to extract decode information.
+
+00:15.000 --> 00:22.450
+So we're going to remove these and remove these and here's what I've got I create an object word and
+
+00:22.460 --> 00:28.410
+I create an object with the Course data.
+
+00:28.490 --> 00:32.020
+So it's going to be like this concert goers.
+
+00:32.460 --> 00:35.070
+And it's going to be equals to the obvious.
+
+00:35.120 --> 00:38.650
+Remember the object and the array they have difference.
+
+00:38.670 --> 00:46.540
+But one of these is that the object will have these reraises and so will have these properties.
+
+00:46.550 --> 00:48.590
+So what's going on out you match.
+
+00:49.010 --> 00:51.870
+The match is going to be equal to the course.
+
+00:52.190 --> 00:55.440
+Remember we're passing the complete card.
+
+00:55.970 --> 00:59.310
+So that's going to be available in the world.
+
+00:59.440 --> 01:05.450
+The content is going to be available and we can use the selector selector.
+
+01:05.480 --> 01:14.980
+We cannot for example AMG and I mean the path to the match so we can see then where the comma in the
+
+01:14.990 --> 01:17.350
+title of the course are going of course.
+
+01:17.360 --> 01:26.480
+Again the selector Angua are going to see for example fears so Bindi's and you can see the title of
+
+01:26.480 --> 01:34.420
+the Course is using it for sort of an average for Gomory rehearing what we're going to have the price.
+
+01:34.430 --> 01:36.840
+Price is equal of course.
+
+01:37.030 --> 01:41.020
+What is the electoral gain and the prize that we are in the rest.
+
+01:41.020 --> 01:51.100
+Is this when you say this ban so we're going to the selector last prize and it's so this ban.
+
+01:51.310 --> 01:56.460
+We need to out that OxyContin here and therefore we also need to.
+
+01:56.490 --> 02:02.550
+It can't be fixed content and thoughts and things like this.
+
+02:02.630 --> 02:04.990
+We need only the data.
+
+02:05.300 --> 02:13.250
+And the other way we were going to extract also the task and finally went through out there a the if
+
+02:13.250 --> 02:19.240
+you take a look here on the anchor we have these three that is called data the so we're going to have
+
+02:19.400 --> 02:21.630
+the it's going to be cost of course.
+
+02:21.760 --> 02:26.050
+I thought the selector we were going to select the anchor.
+
+02:26.320 --> 02:34.120
+Dang where going to get the attribute get attribute incident to the data that ID.
+
+02:34.160 --> 02:38.550
+So then we can send this to the console just to check.
+
+02:38.710 --> 02:47.670
+Or of course 18:4 save these including one of these and you can see we have the or you can see we have
+
+02:47.710 --> 02:54.620
+the ID Number two we had to have the match the price and the title is this cooking course.
+
+02:54.620 --> 02:56.430
+So the idea is looking nice.
+
+02:57.230 --> 03:05.340
+So now that we have this week I'm going to call another function insert into the shopping cart.
+
+03:06.530 --> 03:08.730
+And this is going to be called into.
+
+03:08.810 --> 03:10.440
+Got it.
+
+03:10.630 --> 03:12.330
+We're going to pass this up.
+
+03:13.530 --> 03:16.280
+So we need to write this function.
+
+03:16.320 --> 03:22.460
+This is going to display this elective course into the shopping cart.
+
+03:23.700 --> 03:27.300
+So we need to write this function function.
+
+03:27.460 --> 03:33.580
+And this is going to take a course also so and this object is going to be passed into this function
+
+03:34.170 --> 03:35.240
+as well.
+
+03:35.920 --> 03:44.890
+And then we're going to create our if you take a look on the index and scroll to the top what we're
+
+03:44.890 --> 03:47.240
+looking for this shopping cart.
+
+03:47.420 --> 03:49.230
+This is the.
+
+03:49.280 --> 03:53.570
+It contains this table and we have this table body at the moment.
+
+03:53.570 --> 03:58.560
+This is empty but we're going to insert the is the courses right here.
+
+03:59.060 --> 04:06.900
+And we need to use the word row for each of the courses that we're going to out into the shopping cart.
+
+04:07.270 --> 04:13.530
+What happened at the concert it's going to be cornstalk role in the center of this a little.
+
+04:13.720 --> 04:15.920
+Then this is going to be equal to document.
+
+04:16.070 --> 04:22.050
+And we're going to use again create element what we're going to create a table row and then we're going
+
+04:22.050 --> 04:28.570
+to be a template from the course of a week that we pass into the function.
+
+04:28.580 --> 04:35.240
+So what we're going to use grow that what we're going to use in addition to man this is going to bring
+
+04:35.240 --> 04:42.960
+in the mail from this template a string or template literal some ladies remember to use the back tip
+
+04:43.950 --> 04:48.480
+and single quotes doesn't work with them literals.
