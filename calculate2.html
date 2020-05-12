@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator with stored value using Local storage</title>
+</head>
+<body>
+    <div class="container">
+        first number : 
+        <input class="form-control" id="num1" />
+        <br>second number :
+        <input class="form-control" id="num2" />
+        <br>
+        <select id="operator">
+          <option value="add">addition</option>
+          <option value="sub">subtraction</option>
+          <option value="mul">multiplication</option>
+          <option value="divide">Division</option>
+        </select>
+        <br>
+        <br>
+        <button class="btn btn-primary" id="btn" onclick="calculate()" 
+       onclick="userValue()" >calculate</button>
+        <br>
+        <br>
+          Result:
+        <input type="text" id="output" class="result">
+      </div>
+
+      <script>
+          function calculate() {
+       var operator= document.getElementById('operator').value;
+       var num1 = Number(document.getElementById('num1').value);
+       var num2 = Number(document.getElementById('num2').value);
+       var output = Number(document.getElementById('output').value);
+        if (operator == 'add') {
+        document.getElementById('output').value = num1 + num2;
+        
+    } 
+       else if (operator == 'sub') {
+        document.getElementById('output').value = num1 - num2;
+  } 
+       else if (operator == 'mul') {
+        document.getElementById('output').value = num1 * num2;
+  }
+        else if (operator == 'divide') {
+        document.getElementById('output').value = num1 / num2;
+  }
+        else{
+          document.getElementById('output').value = "nothing  was entered";
+ }
+   
+     var userValue = { num1: num1, num2: num2, output : output};
+  localStorage.setItem('userValue',userValue);
+  localStorage.getItem('userValue');
+
+
+
+
+
+
+  //  var userValue ={}
+  //  userValue['num1'] = num1;
+  //  userValue['num2'] = num2;
+  //  userValue['output'] = output;
+ 
+   console.log(userValue);
+}
+
+  
+      </script>
+</body>
+</html>
