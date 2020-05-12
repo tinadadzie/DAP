@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Addtion, Substraction, Divide & Multiplication using javaScript!</title>
+    
+    <style>
+        body{
+            background: #2980b9;
+        }
+        h3{
+            color: #fff;
+        }
+        label{
+            color: #fff;
+        }
+    </style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h3>Calculator</h3>
+				<hr />
+				<div class="col-lg-1">
+					<label for="desc">First Number:</label> 
+				</div>
+				<div class="col-lg-1">
+					<input type="number" class="form-control" id="num1" value="" required>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-lg-1">
+					<label for="desc">Second Number:</label> 
+				</div>
+				<div class="col-lg-1">
+					<input type="number" class="form-control" id="num2" value="" required>
+				</div>
+				<div class="col-lg-1">
+					<select id="opt" class="form-control">
+						<option>+</option>
+						<option>-</option>
+						<option>*</option>
+						<option>/</option>
+					</select>
+				</div>
+
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-lg-1">
+					<label for="desc">Answer:</label> 
+				</div>
+				<div class="col-lg-1">
+					<input type="text" class="form-control" id="ans" readonly>
+				</div>
+				<div class="col-lg-1">
+                    <button type="submit" name="submit" class="btn btn-danger" 
+                    onClick="calculate()">calulate</button>
+				</div>
+
+			</div>
+        </div>
+        
+        <script>
+           
+            function calculate(){
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                var opt = document.getElementById("opt").value;
+                
+                var ans = eval(num1 + opt + num2);
+                document.getElementById("ans").value = ans;
+
+                var userValue = { FirstNumber: num1, SecondNumber: num2, Answer : ans};
+                localStorage.setItem('userValue',userValue);
+                localStorage.getItem('userValue');
+                console.log(userValue);
+
+            }
+
+        </script>
+        
+	</body>
+</html>
