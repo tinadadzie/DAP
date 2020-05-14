@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+
+ <script type="text/javascript">
+ 	function calculate(){
+ 	  const num1 = Number(document.getElementById('num1').value);
+   	  const num2 = Number(document.getElementById('num2').value);
+  	  const operation = document.getElementById('operation').value;
+
+  let ans = "Invalid Operation";
+
+  switch (operation) {
+    case "+": ans = num1 + num2; break;
+    case "-": ans = num1 - num2; break;
+    case "*": ans = num1 * num2; break;
+    case "/": ans = num1 / num2; break;
+  }
+  
+  document.getElementById('answer').value = ans;
+}
+
+ </script>
+</head>
+<body>
+ 	<h1>My Calculator</h1>
+	<form name="formcalc">
+  	Value 1: <input type="text" id="num1"><br />
+  	Value 2: <input type="text" id="num2"><br />
+    operation(+,-,*,/): <input type="text" id="operation"><br />
+     Answer: <input type="text" id="answer"><br />
+  <input type="button" value="calculate" onclick="calculate()">
+</form>
+
+</body>
+</html>

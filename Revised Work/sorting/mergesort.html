@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function merge(left,right){
+        let arr = [];
+        while(left.length && right.length){
+            if(left[0]< right[0]){
+                arr.push(left.shift());
+            }
+            else{
+                arr.push(right.shift());
+            }
+        }
+        return arr.concat(left.slice().concat(right.slice()));
+    }
+    function mergeSort(arr){
+        if(arr.length < 2){
+            return arr;
+        }
+        
+         const middle = Math.floor(arr.length/2);
+         const left = arr.slice(0, middle);
+         const right = arr.slice(middle);
+
+          return merge(mergeSort(left), mergeSort(right));
+    }
+     
+    const array = [38, 27, 24, 56, 12, 32, 16, 11, 15, 25, 29];
+    console.log(mergeSort(array.slice()));
+    </script>
+</body>
+</html>

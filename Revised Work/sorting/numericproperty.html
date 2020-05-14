@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       let users = [
+    {name: 'Pearl', email: "pearl@gmail.com", Phone: "0248909876",age:23,dateJoined:"21 April 2009"},
+    {name: 'Jane', email: "jall@gmail.com", Phone: "0567890290",  age:27,dateJoined:"21 August 2018"},
+    {name: 'May', email: "maya@gmail.com", Phone: "0279113456",  age:18,dateJoined:"10 May 2009"},
+    {name: 'Peter', email: "p56@gmail.com", Phone: "0248909876", age:20,dateJoined:"12 July 2009"},
+    {name: 'Bee', email: "bee21@gmail.com", Phone: "0248909876",  age:30,dateJoined:"31 January 2009"}
+];
+
+// sort by numeric property using age of user
+  users.sort(function(x,y){
+      if(x.age > y.age)
+      return 1;
+      if(x.age <y.age)
+      return -1;
+      return 0;
+  });
+  console.table(users)
+   </script> 
+</body>
+</html>

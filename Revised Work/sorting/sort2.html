@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting
+
+    </title>
+</head>
+<body>
+    
+
+    <script>
+        var courses = ["Java" ,"Data structure","Complier Construction","Database mgt","Data science",
+        "Artificial Intelligence", "Expert system", "C++"];
+       
+        var registeredCourses = [];
+        var studentCourses = prompt("Enter number of languages.");
+
+
+         if(studentCourses < 4){
+             alert("Input more than 4 languages");
+   }
+           else{
+	        for (var i =1; i <= studentCourses; i++){
+		var coursesValue = prompt("Enter preferred languages");
+        
+		function checkMatch(coursesValue,courses) {
+
+			 for(let i = 0; i < coursesValue.length; i++) { 
+
+			 	for(let a = 0; b < courses; b++) {
+
+			 		if(!(coursesValue[i] === courses[b])) { 
+
+			 			 alert("Mismatch");
+               }
+
+               else{
+                coursesValue.push(registeredCourses);
+               }   
+	    }
+      }	
+      
+        }	
+		
+	}
+    
+           }
+	registeredCourses.sort(function (a,b ) {
+
+	let m = a.toUpperCase(),
+	n = b.toUpperCase();
+	if (m > n)
+		return -1;
+	if (m < n)
+		return 1;
+	return 0;
+});
+
+
+
+ 
+console.log(registeredCourses);
+
+</script>
+</body>
+</html>
