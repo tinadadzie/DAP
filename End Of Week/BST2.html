@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BST PreOrder & postOrder</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+<script>
+// Question 1
+//Insert the key A,B,C,D,E,F,G,H,I,J,K,L into a binary tree in the order.
+// List the node of the tree above in preorder, postorder
+
+// Node class 
+class Node 
+{ 
+    constructor(data) 
+    { 
+        this.data = data; 
+        this.left = null; 
+        this.right = null; 
+    } 
+}
+
+class BinarySearchTree 
+{ 
+    constructor() 
+    { 
+        
+        this.root = null; 
+    } 
+
+    // helper method which creates a new node to  be inserted and calls insertNode 
+      insert(data) 
+{ 
+    // Creating a node and initailising with data  
+    var newNode = new Node(data); 
+                      
+    // root is null then node will be added to the tree and made root. 
+    if(this.root === null) 
+        this.root = newNode; 
+    else
+  
+        // find the correct position in the tree and add the node 
+        this.insertNode(this.root, newNode); 
+} 
+  
+// Method to insert a node in a tree it moves over the tree to find the location 
+// to insert a node with a given data  
+     insertNode(node, newNode) 
+   { 
+    // if the data is less than the node data move left of the tree  
+    if(newNode.data < node.data) 
+    { 
+        // if left is null insert node here 
+        if(node.left === null) 
+            node.left = newNode; 
+        else
+  
+            // if left is not null recurr until null is found 
+            this.insertNode(node.left, newNode);  
+    } 
+  
+    // if the data is more than the node data move right of the tree  
+    else
+    { 
+        // if right is null insert node here 
+        if(node.right === null) 
+            node.right = newNode; 
+        else
+  
+            // if right is not null recurr until null is found 
+            this.insertNode(node.right,newNode); 
+    } 
+}
+
+
+// Performs postorder traversal of a tree 
+preorder(node) 
+{ 
+    if(node !== null) 
+    { 
+        console.log(node.data); 
+        this.preorder(node.left); 
+        this.preorder(node.right); 
+    } 
+} 
+
+// returns root of the tree 
+getRootNode() 
+{ 
+	return this.root; 
+} 
+
+
+
+  
+
+// Performs postorder traversal of a tree 
+postorder(node) 
+{ 
+    if(node !== null) 
+    { 
+        this.postorder(node.left); 
+        this.postorder(node.right); 
+        console.log(node.data); 
+    } 
+} 
+
+}
+//create an object for the binary tree
+var BST = new BinarySearchTree();
+
+
+//inserting nodes to the BinarySearchTree
+BST.insert("A");
+BST.insert("B");
+BST.insert("C");
+BST.insert("D");
+BST.insert("E");
+BST.insert("F");
+BST.insert("G");
+BST.insert("H");
+BST.insert("I");
+BST.insert("J");
+BST.insert("K");
+BST.insert("L");
+
+
+var root = BST.getRootNode()
+BST.preorder(root);
+BST.postorder(root);
+
+
+
+
+</script>
+
+
+</body>
+</html>
