@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3.Write a method to replace all spaces in a string with '%20'. 
+        // You may assume that the string has sufficient space at the end to hold the additional
+        // label is the string you want to modify
+var label ="Today paa God must help me oh"
+        var str = "";
+for (var i = 0; i < label.length; i++) {
+      if (label.charAt(i) == ' ') {
+           str += "%20";
+      } else {
+           str += label.charAt(i);
+      }
+}
+ console.log(str);
+    </script>
+</body>
+</html>

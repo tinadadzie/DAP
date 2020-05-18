@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    <script>
+    if (String.prototype.splice === undefined) {
+  /**
+   * Splices text within a string.
+    intPos The position to insert the text at (before)
+   * {string} text The text to insert
+   *  {int} [Count=0] An optional number of characters to overwrite
+   * @returns {string} A modified string containing the spliced text.
+   */
+  String.prototype.splice = function(intPos, text, count=0) {
+    let calculatedintPos = intPos < 0 ? this.length + intPos : intPos;
+    return this.substring(0, calculatedintPos) +
+      text + this.substring(calculatedintPos + count);
+  };
+}
+
+let originalText = "I want to eat ";
+
+// Positive offset
+console.log(originalText.splice(15, " and").splice(20, "sleep") );
+// replacing a character
+console.log(originalText.splice(2, "need", 4));
+    </script>
+</body>
+</html>

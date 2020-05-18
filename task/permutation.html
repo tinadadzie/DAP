@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permutation</title>
+</head>
+<body>
+    <script>
+ 
+function checkPerm(str1, str2) {
+  let hash = {}
+  
+  if (str1.length !== str2.length) {
+    return false
+  }
+  
+  for (let i = 0; i < str1.length; i++) {
+    if (hash[str1[i]]) {
+      hash[str1[i]]++
+    } else {
+      hash[str1[i]] = 1
+    }
+    
+  }
+  for (let j = 0; j < str2.length; j++) {
+    if (!hash[str2[j]]) return false
+    hash[str2[j]]--
+  } 
+  
+  for (let key in hash) {
+    if (hash[key] !== 0) return false
+  }
+  return true
+}
+console.log(
+checkPerm('test', 'ttes') , 
+checkPerm('abc', 'cdba') 
+);
+    </script>
+</body>
+</html>
