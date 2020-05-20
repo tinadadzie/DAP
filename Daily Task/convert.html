@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion</title>
+</head>
+<body>
+    <script>
+        // Write a Javascript program to convert temperature :44 to and from Celsius,Fahrenheit
+            // Fahrenheit to Celsius : (°F − 32) ÷ 1.8 = °C
+        //    Celsius to Fahrenheit : (°C × 1.8) + 32 = °F
+        
+        function celsiusToFahrenheit(celsius) 
+{
+         var celsiusTemperature = celsius;
+         var celsiusToFahrenheit  = celsiusTemperature * 9 / 5 + 32;
+         var message = celsiusTemperature+'\xB0C is ' + celsiusToFahrenheit + ' \xB0F.';
+          alert(message);
+}
+
+        function fahrenheitToCelsuis(fahrenheit) 
+      {
+        var fahrenheitTemperature = fahrenheit;
+        var fahrenheitToCelsuis = (fahrenheitTemperature - 32) * 5 / 9;
+        var message = fahrenheitTemperature +'\xB0F is ' + fahrenheitToCelsuis + '\xB0C.';
+
+         alert(message);
+       } 
+       celsiusToFahrenheit(44);
+       fahrenheitToCelsuis(44);
+
+
+    </script>
+</body>
+</html>

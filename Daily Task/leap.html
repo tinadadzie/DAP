@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+</head>
+<body>
+    <!-- create an input to accept users field -->
+     <!-- create button -->
+<h3>Javascript Program to find leap year</h3>
+<input type="text" id="year"></input>
+<button onclick="checkLeapYear()">Check</button>
+
+    <script>
+        // Write a javascript program to determine whether the year 2020 is a leap year.
+        // Algorithm
+        // create variable to access the user input
+        // declare a function 
+       //    declare an if statement to check for the three condition
+                    //   If the year is evenly divisible by 4.
+            //   If the year is evenly divisible by 100
+            //   If the year is evenly divisible by 400
+
+        //  if the condition are true then it should  alert is a leap year
+        //  if the condition are false  then it should  alert is not  a  leap year
+
+
+        function checkLeapYear(){
+		
+		var year =document.getElementById("year").value;
+		//three conditions to find out the leap year
+		if( (0 == year % 4) && (0 != year % 100) || (0 == year % 400) )
+		{
+			alert(year+" is a leap year");  
+		}
+		else
+		{
+			alert(year+" is not a leap year");  
+		}
+	}
+       	
+    </script>
+</body>
+</html>
