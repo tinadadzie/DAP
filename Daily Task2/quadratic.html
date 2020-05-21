@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic</title>
+</head>
+<body>
+    <script>
+        // Create a function which solve quadratic equation ax2 + bx + c = 0. 
+        // A quadratic equation may have one, two or no solution. 
+       // The function should return a set of the solution(s).
+
+       const solveQuadratic = (a = 1, b = 0, c = 0) => {
+        if (a === 0) {
+        return 'Not a quadratic equation';
+       }
+       const determinate = b ** 2 - 4 * a * c;
+      const solnSet = new Set();
+
+     let root1, root2;
+     if (determinate === 0) {
+      root1 = -b / (2 * a);
+    solnSet.add(root1);
+  } else if (determinate > 0) {
+    root1 = ((-b + Math.sqrt(determinate)) / 2) * a;
+    root2 = ((-b - Math.sqrt(determinate)) / 2) * a;
+    solnSet.add(root1);
+    solnSet.add(root2);
+  } else {
+  }
+  return solnSet;
+};
+console.log(solveQuadratic()); //Set(1) {0}
+console.log(solveQuadratic(1, 2, 3)); // Set(0) {}
+console.log(solveQuadratic(1, 4, 4)); //Set(1) {-2}
+console.log(solveQuadratic(1, -1, -2)); //{2, -1}
+console.log(solveQuadratic(1, 7, 12)); //Set(2) {-3, -4}
+console.log(solveQuadratic(1, 0, -4)); //{2, -2}
+console.log(solveQuadratic(1, -1, 0)); //{1, 0}
+
+    </script>
+</body>
+</html>

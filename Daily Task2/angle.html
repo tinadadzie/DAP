@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angle</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program to find the types of a given angle.
+     var angle = prompt("Enter your value");
+
+        function angle_Type(angle) {
+        if(angle < 90) {
+            return "Acute angle.";
+           }
+  if(angle === 90) {
+       return "Right angle.";
+      }
+   if(angle < 180) {
+    return "Obtuse angle.";
+  }
+      return "Straight angle.";
+}
+
+
+alert (angle_Type(angle));
+
+    </script>
+</body>
+</html>
