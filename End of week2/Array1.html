@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // Question 
+        // Given two sorted arrays, find the number of elements in common. 
+        // The arrays are the same length and each has all distinct elements. 
+
+
+        var a = [13, 27 ,35, 40, 49, 55 ,59 ], // left side
+        b = [ 17 ,35, 39, 40, 55, 58, 60 ],     // right side
+          i = 0,                                 // index for a
+          j = 0;                                 // index for b
+
+  while (i < a.length && j < b.length) {     // prevent running forever
+     while (a[i] < b[j]) {                  // check left side
+        ++i;                               // increment index
+    }
+    while (b[j] < a[i]) {                  // check right side
+        ++j;                               // increment
+    }
+    if (a[i] === b[j]) {                   // check equalness
+        console.log(a[i], b[j]);           // output or collect
+        ++i;                               // increment indices
+        ++j;
+    }
+}
+    </script>
+</body>
+</html>

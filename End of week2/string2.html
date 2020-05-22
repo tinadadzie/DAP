@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Implement a method to perform basic string compression using the counts of repeated characters
+
+        /*
+* Implement a method to perform basic string compression using
+* the counts of repeated characters. For example, the string aabcccccaaa
+* would become a2b1c5a3. If the "compressed" string would not become
+* smaller than the original string, your method should return the original string.
+*/
+
+
+function countWords() {
+
+var word = "aabcccccaaa";
+var result = "";
+
+var counter = 1;
+for (var i = 0; i <= word.length; i++) {
+  if (word[i] != word[i + 1]) {
+    result = result + word[i] + counter;
+    counter = 1;
+  } else {
+    counter++;
+  }
+}
+
+return result.length < word.length ? result : word;
+
+}
+
+console.log(countWords());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// method3
+// function countWords()
+//     {
+//     var word = "aabcccccaaa";
+//     var result = "";
+//     var counter = 1;
+
+//     for(var i = 0; i <= word.length; i++) {
+//         if(word.substr(i, 1) === word.substr(i+1, 1)) {
+//             counter++;
+//         }
+//         else {
+//             result = result + word.substr(i, 1) + counter;
+//             counter = 1;
+//         }
+//     }
+
+//     console.log(result);
+
+//     if(result.length < word.length)
+//         console.log(result)
+//     else{
+//         console.log(word);
+// }
+// }
+
+// countWords();
+
+
+
+
+
+
+
+// method2
+// const compressString = (s1) => {
+//   let charMap = new Map();
+  
+//   for(let i=0; i<s1.length; i++){
+//     charMap.set(s1[i], charMap.get(s1[i]) + 1 || 1);
+//   }
+  
+//   let s = '',
+//       mapKeys = charMap.keys(),
+//       mapValues = charMap.values();
+//   charMap.forEach(function(value, key, map){
+//     s += key+value;
+//   });
+  
+//   return s;
+// }
+
+// let a = 'aaabbccccaa';
+// console.log(compressString(a));
+
+
+    </script>
+</body>
+</html>

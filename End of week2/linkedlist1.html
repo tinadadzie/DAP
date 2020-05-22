@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked list exercise</title>
+</head>
+<body>
+    <script>
+        //2.3 Delete Middle Node: Implement an algorithm to delete a node in the middle(ie. any node byt first and last node, not necessarily the exact middle) of a singly linked list, given only access to that node.
+//input: the node c from the linked list a->b->c->d->e->f
+//result: nothing is returned, but the new linked list looks like a->b->d->e->f
+
+/////////////////////////////////////////////////////////////////////////////////////////
+function deleteMiddleNode(node){
+  if(!node || !node.next){
+    return 'Invalid Node';
+  }
+  node.value = node.next.value;
+  node.next = node.next.next
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//Linked List - HR DS
+var LinkedList = function(){
+	this.head = null;
+	this.tail = null;
+};
+
+LinkedList.prototype.addToTail = function(val){
+	var newNode = new Node(val);
+	if(!this.head && !this.tail){
+		this.head = newNode;
+		this.tail = newNode;
+	}else{
+		this.tail.next = newNode;
+		this.tail = newNode;
+	}
+};
+
+LinkedList.prototype.removeFromHead = function(){
+	if(!this.head){
+		return null;
+	}
+	var ret;
+	ret = this.head;
+	this.head = this.head.next;
+	ret.next = null;
+	return ret.value;
+};
+
+LinkedList.prototype.contains = function(val){
+	if(!this.head){
+		return false;
+	}
+	var current = this.head;
+	while(current){
+		if(current.value === val){
+			return true;
+		}
+		current = current.next;
+	}
+	return false;
+};
+
+LinkedList.prototype.get = function(val){
+  if(!this.head){
+		return null;
+	}
+	var current = this.head;
+	while(current){
+		if(current.value === val){
+			return current;
+		}
+		current = current.next;
+	}
+	return null;
+  };
+
+var Node = function(val){
+	this.value = val;
+	this.next = null;
+};
+/////////////////////////////////////////////////////////////////////////////////////////
+
+var LL = new LinkedList();
+
+LL.addToTail("a");
+LL.addToTail("b");
+LL.addToTail("c");
+LL.addToTail("d");
+LL.addToTail("e");
+LL.addToTail("f");
+
+var nodeToBeDeleted = LL.get("c");
+console.log(nodeToBeDeleted);
+
+deleteMiddleNode(nodeToBeDeleted);
+
+
+console.log(LL.head.value);
+console.log(LL.head.next.value);
+console.log(LL.head.next.next.value);
+console.log(LL.head.next.next.next.value);
+console.log(LL.head.next.next.next.next.value);
+// console.log(LL.head.next.next.next.next.next.value);//error;
+
+    </script>
+</body>
+</html>

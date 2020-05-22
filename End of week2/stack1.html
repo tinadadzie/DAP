@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> stack exercise</title>
+</head>
+<body>
+    <script>
+        // Describe how you could use a single array to implement three stacks. 
+
+
+
+        class NStack {
+  constructor(n) {
+    this.stacks = [];
+    this.sizes = new Array(n).fill(0);
+  }
+  
+  peek(i) {
+    return this.stacks[i+(this.sizes[i]-1)*this.sizes.length];
+  }
+  
+  pop(i) {
+    if (this.sizes[i] > 0) {
+      return this.stacks.splice(
+        i + (--this.sizes[i]) * this.sizes.length, 1, null
+      );
+    }
+  }
+  
+  push(i, elem) {
+    if (this.sizes[i] >= 0) {
+      this.stacks[i+(this.sizes[i]++)*this.sizes.length] = elem;
+    }
+  }
+}
+
+const tripleStack = new NStack(3);
+tripleStack.push(0, "banana");
+console.log(tripleStack);
+tripleStack.push(2, "apple");
+console.log(tripleStack);
+tripleStack.push(1, "watermelon");
+console.log(tripleStack);
+tripleStack.push(2, "jackfruit");
+console.log(tripleStack);
+tripleStack.pop(0);
+console.log(tripleStack);
+tripleStack.pop(2);
+console.log(tripleStack);
+console.log(tripleStack.peek(0));
+console.log(tripleStack.peek(1));
+console.log(tripleStack.peek(2));
+
+    </script>
+</body>
+</html>

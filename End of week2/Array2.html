@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+      Find the min/max element  
+      of an Array using JavaScript 
+  </title> 
+</head> 
+  
+<body> 
+    <h1 style="color: red"> 
+      Max/Min
+  </h1> 
+    <b> 
+      Find the min/max element 
+      of an Array using JavaScript 
+  </b> 
+    <p> 
+      Click on the button below to 
+      find out the minimum and  
+      maximum of the array  
+      [50, 60, 20, 10, 40] 
+  </p> 
+    
+    <p>Minimum element is: <span class="min"> 
+      </span> 
+        <br>Maximum Element is: <span class="max"> 
+      </span></p> 
+    <button onclick="findMinMax()"> 
+      Click to check 
+  </button> 
+    <script> 
+        function findMinMax() { 
+            array = [50, 60, 20, 10, 120,40]; 
+            minValue = Infinity; 
+            maxValue = -Infinity; 
+  
+            for (item of array) { 
+                // find minimum value 
+                if (item < minValue) 
+                    minValue = item; 
+  
+                // find maximum value 
+                if (item > maxValue) 
+                    maxValue = item; 
+            } 
+  
+            document.querySelector( 
+              '.min').textContent = minValue; 
+            document.querySelector( 
+              '.max').textContent = maxValue; 
+        } 
+    </script> 
+</body> 
+  
+</html> 

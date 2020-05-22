@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linked </title>
+</head>
+<body>
+    <script>
+
+        // 2.8 Loop Detection: Given a circular linked list, implement an algorithm that returns the node at the 
+        // beginning of the loop. 
+
+        class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+function hasCycle(head) {
+  let node = head;
+  let map={};
+
+  while(node){
+      if(map[node.value]){
+      //return node or true
+         return {"Found":node}
+      }  
+    else{
+
+      map[node.value] = true;
+    }
+    node = node.next;
+  }
+
+  return "Not found";
+}
+
+const nodeA = new Node('A');
+const nodeB = nodeA.next = new Node('B');
+const nodeC = nodeB.next = new Node('C');
+const nodeD = nodeC.next = new Node('D');
+const nodeE = nodeD.next = new Node('E');
+console.log(hasCycle(nodeA)); // => null
+nodeE.next = nodeB;
+console.log(hasCycle(nodeA))
+ 
+
+            </script>
+</body>
+</html>
